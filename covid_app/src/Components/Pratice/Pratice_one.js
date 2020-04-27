@@ -2,23 +2,20 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 export default function Pratice_one() {
   const [list, setList] = useState([]);
-
-  useEffect(() => {
-    setList({
-      options: {
-        chart: {
-          id: "basic-bar",
-        },
-        xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-        },
+  const [options, setOptions] = useState();
+  const [series, setSeries] = useState();
+  useEffect(async () => {
+    await setOptions({
+      chart: {
+        id: "basic-bar",
       },
-      series: [
-        {
-          name: "series-1",
-          data: [30, 40, 45, 50, 49, 60, 70, 91],
-        },
-      ],
+      xaxis: {
+        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+      },
+    });
+    setSeries({
+      name: "series-1",
+      data: [30, 40, 45, 50, 49, 60, 70, 91],
     });
   }, []);
 
@@ -26,10 +23,11 @@ export default function Pratice_one() {
     <div className="app">
       <div className="row">
         <div className="mixed-chart">
+          <h1>hellos</h1>
           <Chart
-            options={list.options}
-            series={list.series}
-            type="line"
+            options={{ options }}
+            series={[series]}
+            type="bar"
             width="500"
           />
         </div>
