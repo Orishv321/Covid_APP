@@ -34,7 +34,7 @@
 }
 
 .my-3 {
-  margin-top: 3vh;
+  margin-top: 5vh;
   margin-bottom: 3vh;
 }
 nav {
@@ -272,46 +272,36 @@ table th {
   background: coral;
   color: white;
 }
-.tendents-right-bar {
-  padding-right: 5vw;
-  box-sizing: border-box;
-  flex: 1;
-  width: 60%;
-  background: transparent;
-  background-color: ivory;
-  margin: 2vh;
-}
 
-.tendents-left-bar {
-  width: 25%;
-  background: white;
-  margin-top: 2vh;
-}
 .error-msg {
   color: red;
 }
-.addBill-area {
-  margin-left: 20px;
-}
-.tab-titles {
-  text-align: center;
-  font-size: large;
-  font-weight: 600;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  background: coral;
-  height: 40px;
-  border: none;
+
+.first-count-div {
+  margin-top: 15px;
+  cursor: pointer;
+
+  color: white;
+  border: black;
   border-radius: 20px;
 }
-.tab-titles div {
-  margin-top: 8px;
-  cursor: pointer;
-  color: white;
-  border-radius: 15px;
+.first-count-div div {
+  margin: 15px;
 }
-.tab-titles div:hover {
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-count-div :hover {
   color: black;
-  margin-top: 5px;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+}
+.danger {
+  background-color: #f44336;
+}
+.warning {
+  background: coral;
+}
+.success {
+  background: yellowgreen;
 }
