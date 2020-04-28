@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 import * as actions from "../../Store/Action";
 let SearchPage = (props) => {
   const [country, setCountry] = useState([]);
-  const [flag, setFlag] = useState([]);
+  const [Flags, setFlags] = useState();
   useEffect(() => {
     console.log(props.location.country);
     props.getTotCountryCase();
@@ -13,22 +13,21 @@ let SearchPage = (props) => {
     props.totCountryCaseGet &&
       setCountry(
         Object.values(props.totCountryCaseGet).find(
-          (country) => country.country == "Nepal",
+          (country) => country.country == props.location.country,
         ),
       );
   }, [props.totCountryCaseGet]);
-  useEffect(async () => {
-    await setFlag(props.totCountryCaseGet);
-  }, []);
+  useEffect(() => {
+    country.countryInfo &&
+      setFlags(Object.values(country.countryInfo).map((cc) => cc));
+  }, [country]);
   return (
     <>
-      {console.log(flag)}
+      <h1 className="h1">{country.country}</h1>
       {country && (
-        <div>
-          <div>
-            <img src={"https://corona.lmao.ninja/assets/img/flags/np.png"} />
-          </div>
-          <div>
+        <div className="d-flex flex-column">
+          <div className="my-3">{Flags && <img src={Flags.slice(-1)} />}</div>
+          <div className="my-3">
             <Chart
               options={{
                 chart: {
