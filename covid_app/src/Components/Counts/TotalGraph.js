@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect, connectAdvanced } from "react-redux";
 import * as actions from "../../Store/Action";
 //to import line chart
-import { Line, Bar, Radar } from "react-chartjs-2";
 import Chart from "react-apexcharts";
 let TotalGraph = (props) => {
   return (

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-
+import { useHistory } from "react-router-dom";
 let TotalTab = (props) => {
   const [countryData, setCountryData] = useState(null);
-
+  const history = useHistory();
   useEffect(() => {
     props.totCountryCaseGet &&
       setCountryData(
@@ -32,7 +31,13 @@ let TotalTab = (props) => {
       <tbody>
         {countryData &&
           countryData.map((cd, key) => (
-            <tr key={key}>
+            <tr
+              className="pointer"
+              onClick={() =>
+                history.push({ pathname: `/search`, country: cd.country })
+              }
+              key={key}
+            >
               <td>{cd.updated}</td>
               <td>{cd.country}</td>
               <td>{cd.cases}</td>
@@ -46,6 +51,13 @@ let TotalTab = (props) => {
             </tr>
           ))}
       </tbody>
+      <tfoot>
+        <tr>
+          <th colSpan="10">
+            <center>The total Data</center>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   );
 };

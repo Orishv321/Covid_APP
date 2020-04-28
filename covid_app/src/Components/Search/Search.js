@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useForm } from "react-hook-form";
-import * as actions from "../../Store/Action";
-
+import { useHistory } from "react-router-dom";
 let Search = (props) => {
+  const history = useHistory();
   const [country, setCountry] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   useEffect(() => {
@@ -15,9 +15,7 @@ let Search = (props) => {
       );
   }, [props.totCountryCaseGet]);
   let SearchHandel = (data) => {
-    console.log(data);
-    // props.searchHomeInfo(data.search);
-    // history.push("/search");
+    history.push({ pathname: `/search`, country: data.search });
   };
   return (
     <form onSubmit={handleSubmit(SearchHandel)} className={"input-box"}>
