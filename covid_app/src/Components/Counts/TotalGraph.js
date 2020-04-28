@@ -5,9 +5,6 @@ import * as actions from "../../Store/Action";
 import { Line, Bar, Radar } from "react-chartjs-2";
 import Chart from "react-apexcharts";
 let TotalGraph = (props) => {
-  useEffect(() => {
-    props.getTotCountryCase();
-  }, []);
   return (
     <>
       {props.totCountryCaseGet && (
@@ -81,14 +78,5 @@ let TotalGraph = (props) => {
     </>
   );
 };
-let mapStateToProps = (state) => {
-  return {
-    totCountryCaseGet: state.CountReducer.totCountryCounts,
-  };
-};
-let mapDispatchToProps = (dispatch) => {
-  return {
-    getTotCountryCase: () => dispatch(actions.GetTotCountryCase()),
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(TotalGraph);
+
+export default TotalGraph;

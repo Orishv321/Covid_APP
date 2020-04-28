@@ -3,12 +3,14 @@ import { connect } from "react-redux";
 import * as actions from "../../Store/Action";
 import TotalGraph from "./TotalGraph";
 import Search from "../Search/Search";
+import TotalTab from "./TotalTab";
 let Counts = (props) => {
   const [total, setTotal] = useState([]);
 
   //displatch to api
   useEffect(() => {
     props.getTotalCounts();
+    props.getTotCountryCase();
   }, []);
   //receiving the total data
   useEffect(() => {
@@ -53,10 +55,13 @@ let Counts = (props) => {
         </div>
       </div>
       <div className="my-3">
-        <Search />
+        <Search totCountryCaseGet={props.totCountryCaseGet} />
       </div>
       <div className="my-3">
-        <TotalGraph />
+        <TotalGraph totCountryCaseGet={props.totCountryCaseGet} />
+      </div>
+      <div className="my-3">
+        <TotalTab totCountryCaseGet={props.totCountryCaseGet} />
       </div>
     </div>
   );
@@ -64,11 +69,13 @@ let Counts = (props) => {
 let mapStateToProps = (state) => {
   return {
     totalCountGet: state.CountReducer.totallCounts,
+    totCountryCaseGet: state.CountReducer.totCountryCounts,
   };
 };
 let mapDispatchToProps = (dispatch) => {
   return {
     getTotalCounts: () => dispatch(actions.GetTotalCounts()),
+    getTotCountryCase: () => dispatch(actions.GetTotCountryCase()),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Counts);

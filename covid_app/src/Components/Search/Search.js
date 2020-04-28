@@ -7,9 +7,6 @@ let Search = (props) => {
   const [country, setCountry] = useState([]);
   const { register, handleSubmit, errors } = useForm();
   useEffect(() => {
-    props.getTotCountryCase();
-  }, []);
-  useEffect(() => {
     props.totCountryCaseGet &&
       setCountry(
         Object.values(props.totCountryCaseGet).sort((a, b) =>
@@ -24,7 +21,6 @@ let Search = (props) => {
   };
   return (
     <form onSubmit={handleSubmit(SearchHandel)} className={"input-box"}>
-      {country && console.log(">>", country)}
       <input
         type="text"
         name="search"
@@ -40,22 +36,21 @@ let Search = (props) => {
       />
       <datalist id={"locationList"}>
         {country &&
-          country.slice().map((con) => <option value={con.country} />)}
+          country
+            .slice()
+            .map((con, key) => <option value={con.country} key={key} />)}
       </datalist>
-      <button className={"btn flat"}>
-        <i className="material-icons">search</i>
-      </button>
+
+      <i onClick={handleSubmit(SearchHandel)} className="material-icons ">
+        search
+      </i>
     </form>
   );
 };
 let mapStateToProps = (state) => {
-  return {
-    totCountryCaseGet: state.CountReducer.totCountryCounts,
-  };
+  return {};
 };
 let mapDispatchToProps = (dispatch) => {
-  return {
-    getTotCountryCase: () => dispatch(actions.GetTotCountryCase()),
-  };
+  return {};
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
