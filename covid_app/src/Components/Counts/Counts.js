@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../Store/Action";
-import { Card } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import TotalGraph from "./TotalGraph";
 import Search from "../Search/Search";
 import TotalTab from "./TotalTab";
@@ -20,9 +20,10 @@ let Counts = (props) => {
 
   return (
     <div className={"d-flex flex-column"}>
-      <h1 className="display-4">World wide</h1>
-      <div className={"d-flex flex-row justify-between"}>
-        <div className={"first-count-div danger"}>
+      <p className="lead display-4">World Wide Count </p>
+
+      <Row>
+        <Col>
           {total &&
             total.map((tot, key) => (
               <Card
@@ -43,8 +44,8 @@ let Counts = (props) => {
                 </Card.Body>
               </Card>
             ))}
-        </div>
-        <div className={"first-count-div warning"}>
+        </Col>
+        <Col>
           {total &&
             total.map((tot, key) => (
               <Card
@@ -67,8 +68,8 @@ let Counts = (props) => {
                 </Card.Body>
               </Card>
             ))}
-        </div>
-        <div className={"first-count-div success"}>
+        </Col>
+        <Col>
           {total &&
             total.map((tot, key) => (
               <Card
@@ -84,8 +85,8 @@ let Counts = (props) => {
                 </Card.Body>
               </Card>
             ))}
-        </div>
-      </div>
+        </Col>
+      </Row>
       <div className="my-3">
         <Search totCountryCaseGet={props.totCountryCaseGet} />
       </div>
