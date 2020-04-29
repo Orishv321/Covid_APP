@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../Components/NavBar/NavBar";
 import { Switch, Route } from "react-router-dom";
 import routes from "../Router";
+import { Container } from "react-bootstrap";
 let Layout = () => {
   let callForRouters = routes.map((route, key) => (
     <Route
@@ -14,9 +15,9 @@ let Layout = () => {
   return (
     <>
       <NavBar />
-      <main>
+      <Container style={{ paddingTop: "50px" }}>
         <Switch>{callForRouters}</Switch>
-      </main>
+      </Container>
     </>
   );
 };

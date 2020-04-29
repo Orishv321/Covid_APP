@@ -1,22 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 
 export default function NavBar() {
   let navList = [
     { to: "/", link: "HomePage" },
-    { to: "/hepl", link: "Hepl Numbers" },
+    { to: "/hepl", link: "Help Numbers" },
     { to: "/counts", link: "Counts" },
   ];
   return (
-    <nav>
-      <div className="logo">Covit_news</div>
-      <div className="nav-items">
-        {navList.map((list, key) => (
-          <div className="nav-item" key={key}>
-            <Link to={list.to}>{list.link}</Link>
-          </div>
-        ))}
-      </div>
-    </nav>
+    <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Link to="/">
+        <Navbar.Brand>Covit_news</Navbar.Brand>
+      </Link>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse
+        id="responsive-navbar-nav"
+        className="justify-content-end"
+      >
+        <Nav>
+          {navList.map((list, key) => (
+            <Nav.Link key={key}>
+              <Link to={list.to}>{list.link}</Link>
+            </Nav.Link>
+          ))}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
