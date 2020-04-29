@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Table } from "react-bootstrap";
 let TotalTab = (props) => {
   const [countryData, setCountryData] = useState(null);
   const history = useHistory();
@@ -12,7 +13,7 @@ let TotalTab = (props) => {
       );
   }, [props.totCountryCaseGet]);
   return (
-    <table className="centered">
+    <Table striped bordered hover variant="dark" responsive>
       <thead>
         <tr>
           <th>Update Data</th>
@@ -38,7 +39,7 @@ let TotalTab = (props) => {
               }
               key={key}
             >
-              <td>{cd.updated}</td>
+              <td>{key}</td>
               <td>{cd.country}</td>
               <td>{cd.cases}</td>
               <td>{cd.todayCases} </td>
@@ -58,7 +59,7 @@ let TotalTab = (props) => {
           </th>
         </tr>
       </tfoot>
-    </table>
+    </Table>
   );
 };
 export default TotalTab;

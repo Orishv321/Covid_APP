@@ -5,7 +5,7 @@ import { Navbar, Nav } from "react-bootstrap";
 export default function NavBar() {
   let navList = [
     { to: "/", link: "HomePage" },
-    { to: "/hepl", link: "Help Numbers" },
+    { to: "/help", link: "Help Numbers" },
     { to: "/counts", link: "Counts" },
   ];
   return (

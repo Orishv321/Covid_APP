@@ -26,7 +26,7 @@ export let Hosital = [
   { name: "Kathmandu Model Hospital", num: " 	4240805" },
   { name: "B&B Hospital", num: " 	5533206" },
   { name: "Medicare National Hospital", num: " 	4467067" },
-  { name: "Medicare National Hospital" - Ambulance, num: " 	4467067" },
+  { name: "Medicare National Hospital-Ambulance", num: " 	4467067" },
   { name: "Nepal Orthopaedic Hospital", num: " 4493725" },
   {
     name: "Kathmandu Medical College (Teaching Hospital - Sinamangal)",
@@ -51,4 +51,59 @@ export let Other_Services = [
   { name: "National KidneyCentre", num: "4429866/4426016" },
   { name: "Fire Brigade", num: "101" },
   { name: "Blood Bank", num: "4225344" },
+];
+
+export let covid_info = [
+  {
+    name: "Doctors",
+    num: "9851255839 / 9851255837 / 9851255834",
+    time: "8AM - 8PM.",
+  },
+  {
+    name: "Covid new Infornation",
+    num: "1115 /1133 ",
+    time: "6am to 10pm",
+  },
+];
+export let Who_message = [
+  {
+    language: "Nepal",
+    Text: "hi",
+    num: "+41 79 8931892",
+  },
+  {
+    language: "Arabic",
+    Text: "مرحبا",
+    num: "+41 22 501 70 23",
+  },
+  {
+    language: "English",
+    Text: "hi",
+    num: "+41 79 8931892",
+  },
+  {
+    language: "French",
+    Text: "salut",
+    num: "+41 22 501 72 98",
+  },
+  {
+    language: "Hindi",
+    Text: "नमस्ते",
+    num: "+41 22 501 73 41",
+  },
+  {
+    language: "Italian",
+    Text: "ciao",
+    num: "+41 22 501 78 34 ",
+  },
+  {
+    language: "Spanish",
+    Text: "hola",
+    num: "+41 22 501 76 90",
+  },
+  {
+    language: "Portuguese",
+    Text: "oi",
+    num: " +41 22 501 77 35",
+  },
 ];
