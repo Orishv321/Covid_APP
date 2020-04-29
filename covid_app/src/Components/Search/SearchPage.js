@@ -23,25 +23,35 @@ let SearchPage = (props) => {
   }, [country]);
   return (
     <>
-      <h1 className="h1">{country.country}</h1>
       {country && (
         <div className="d-flex flex-column">
-          <div className="my-3">{Flags && <img src={Flags.slice(-1)} />}</div>
+          <div className="d-flex flex-row justify-around">
+            <div className="my-3">{Flags && <img src={Flags.slice(-1)} />}</div>
+            <div>
+              <h1>{country.country}</h1>
+              <p className="flow-text">
+                Affected
+                <br />
+                <text style={{ color: "red " }}>{country.active}</text>
+              </p>
+            </div>
+          </div>
           <div className="my-3">
             <Chart
               options={{
                 chart: {
+                  height: 390,
                   type: "radialBar",
                 },
                 plotOptions: {
                   radialBar: {
                     offsetY: 0,
                     startAngle: 0,
-                    endAngle: 270,
+                    endAngle: 300,
                     hollow: {
-                      margin: 0,
-                      size: "20%",
-                      background: "white",
+                      margin: 5,
+                      size: "15%",
+                      background: "transparent",
                     },
                     dataLabels: {
                       name: {
@@ -84,7 +94,7 @@ let SearchPage = (props) => {
                     useSeriesColors: true,
                   },
                   markers: {
-                    size: 0,
+                    size: 30,
                   },
                   formatter: function (seriesName, opts) {
                     return (
@@ -119,7 +129,7 @@ let SearchPage = (props) => {
                 `${country.recovered}`,
               ]}
               type="radialBar"
-              width="80%"
+              width="85%"
               height="390"
             />
           </div>
@@ -139,23 +149,3 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
-// labels: [
-//   "cases",
-//   "todayCases",
-//   "deaths",
-//   "todayDeath",
-//   "recovered",
-//   "active",
-//   "critical",
-//   "tests",
-// ],
-//   [
-//     `${country.cases}`,
-//     `${country.todayCases}`,
-//     `${country.deaths}`,
-//     `${country.todayDeath}`,
-//     `${country.recovered}`,
-//     `${country.active}`,
-//     `${country.critical}`,
-//     `${country.tests}`,
-//   ];

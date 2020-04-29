@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   let navList = [
     { to: "/", link: "HomePage" },
-    { to: "/news", link: "CurentNews" },
+    { to: "/hepl", link: "Hepl Numbers" },
     { to: "/counts", link: "Counts" },
   ];
   return (
