@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Covid_APP/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Covid_APP/static/js/main.3dc740f5.chunk.js",
+    "main.js.map": "/Covid_APP/static/js/main.3dc740f5.chunk.js.map",
+    "runtime-main.js": "/Covid_APP/static/js/runtime-main.ffc6cd11.js",
+    "runtime-main.js.map": "/Covid_APP/static/js/runtime-main.ffc6cd11.js.map",
+    "static/css/2.69121389.chunk.css": "/Covid_APP/static/css/2.69121389.chunk.css",
+    "static/js/2.7c352356.chunk.js": "/Covid_APP/static/js/2.7c352356.chunk.js",
+    "static/js/2.7c352356.chunk.js.map": "/Covid_APP/static/js/2.7c352356.chunk.js.map",
+    "index.html": "/Covid_APP/index.html",
+    "precache-manifest.3cf45f1bfd77f77ce3a1d296ec20dc4b.js": "/Covid_APP/precache-manifest.3cf45f1bfd77f77ce3a1d296ec20dc4b.js",
+    "service-worker.js": "/Covid_APP/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/Covid_APP/static/css/2.69121389.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Covid_APP/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.7c352356.chunk.js.LICENSE.txt": "/Covid_APP/static/js/2.7c352356.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/Covid_APP/static/media/1.a19da44b.png",
+    "static/media/1.gif": "/Covid_APP/static/media/1.f63e0219.gif",
+    "static/media/10.png": "/Covid_APP/static/media/10.2223c2ca.png",
+    "static/media/2.gif": "/Covid_APP/static/media/2.56b9bead.gif",
+    "static/media/2.png": "/Covid_APP/static/media/2.e8224063.png",
+    "static/media/3.png": "/Covid_APP/static/media/3.578de0ef.png",
+    "static/media/3.gif": "/Covid_APP/static/media/3.84061fc7.gif",
+    "static/media/4.gif": "/Covid_APP/static/media/4.ad846c92.gif",
+    "static/media/4.png": "/Covid_APP/static/media/4.bee207ef.png",
+    "static/media/5.png": "/Covid_APP/static/media/5.e8ebc6d6.png",
+    "static/media/5.gif": "/Covid_APP/static/media/5.f53bcdb8.gif",
+    "static/media/6.gif": "/Covid_APP/static/media/6.7bab1a78.gif",
+    "static/media/6.png": "/Covid_APP/static/media/6.9d0c5399.png",
+    "static/media/7.png": "/Covid_APP/static/media/7.ff2538bc.png",
+    "static/media/8.png": "/Covid_APP/static/media/8.9e960e67.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ffc6cd11.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.7c352356.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.3dc740f5.chunk.js"
+  ]
+}
